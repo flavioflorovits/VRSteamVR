@@ -336,7 +336,7 @@ AudioSource:
   m_GameObject: {fileID: 319270862}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
   m_audioClip: {fileID: 8300000, guid: 244d4b113354f4041b11b14a0b2fe8dc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -432,7 +432,7 @@ AudioSource:
   m_GameObject: {fileID: 319270862}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1aae002db4e3e5645ba07ae44b2de956, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -528,10 +528,10 @@ AudioSource:
   m_GameObject: {fileID: 319270862}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 984117e96b23b9640a50f8cd9acec87a, type: 3}
+  OutputAudioMixerGroup: {fileID: 243758081335279580, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 893dd79a273f8c84694808e1f714555c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1629,8 +1629,8 @@ MonoBehaviour:
   - {fileID: 82729127075531060}
   - {fileID: 3782252171961504855}
   downedPins: []
-  strike: {fileID: 0}
-  spare: {fileID: 0}
+  strike: {fileID: 319270865}
+  spare: {fileID: 319270866}
 --- !u!65 &1259225253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5739,7 +5739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6999496759644774091, guid: bdc856de7c3e60947810940026db9ea0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9498148
+      value: 3.9883041
       objectReference: {fileID: 0}
     - target: {fileID: 6999496759644774091, guid: bdc856de7c3e60947810940026db9ea0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6858,7 +6858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4821734430713627183, guid: 210f7ca1234525a428bb3191fa0ef082, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9715109
+      value: 4.01
       objectReference: {fileID: 0}
     - target: {fileID: 4821734430713627183, guid: 210f7ca1234525a428bb3191fa0ef082, type: 3}
       propertyPath: m_LocalPosition.y
