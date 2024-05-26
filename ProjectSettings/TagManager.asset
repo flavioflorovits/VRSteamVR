@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BallL
   - BallR
+  - Pin
+  - BallG
   layers:
   - Default
   - TransparentFX

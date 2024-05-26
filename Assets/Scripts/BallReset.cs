@@ -26,7 +26,7 @@ public class BallReset : MonoBehaviour
     }
     IEnumerator ResetBall()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(5);
 
         InitBalls.Instance.InitializeBalls();
         Destroy(gameObject);
