@@ -28,7 +28,14 @@ public class BallReset : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
 
-        InitBalls.Instance.InitializeBalls();
+        if (gameObject.CompareTag("BallL"))
+        {
+            InitBalls.Instance.InitializeBalls(1);   
+        }
+        else if(gameObject.CompareTag("BallR"))
+        {
+            InitBalls.Instance.InitializeBalls(2);
+        }
         Destroy(gameObject);
     }
 }

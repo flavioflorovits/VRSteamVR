@@ -37,4 +37,16 @@ public class InitBalls : MonoBehaviour
         Instantiate(ballPrefabL, ballPosL.transform.position, Quaternion.identity);
         Instantiate(ballPrefabR, ballPosR.transform.position, Quaternion.identity);
     }
+
+    public void InitializeBalls(int ball)
+    {
+        if (ball == 1)
+        {
+            Instantiate(ballPrefabL, ballPosL.transform.position, Quaternion.identity);
+        }
+        else if(ball == 2)
+        {
+            Instantiate(ballPrefabR, ballPosR.transform.position, Quaternion.identity);
+        }
+    }
 }

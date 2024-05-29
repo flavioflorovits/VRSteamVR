@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class BowlingManager : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class BowlingManager : MonoBehaviour
             pinRotation.Add(pin.transform.rotation);
         }
 
+        ScoreHandler.Instance.UpdateRound(1);
+        ScoreHandler.Instance.UpdateScore(0);
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -74,6 +78,9 @@ public class BowlingManager : MonoBehaviour
             currentFrame++;
             Debug.Log("STRIKE");
             strike.Play();
+            SteamVR_Actions.default_Haptic[SteamVR_Input_Sources.LeftHand].Execute(0, 1, 10, 1);
+            SteamVR_Actions.default_Haptic[SteamVR_Input_Sources.RightHand].Execute(0, 1, 10, 1);
+            ScoreHandler.Instance.UpdateScore(totalScore);
         }
         else if (!firstThrow && downedPins.Count == 10)
         {
@@ -84,6 +91,9 @@ public class BowlingManager : MonoBehaviour
             firstThrow = true;
             Debug.Log("SPARE");
             spare.Play();
+            SteamVR_Actions.default_Haptic[SteamVR_Input_Sources.LeftHand].Execute(0, 1, 50, 1);
+            SteamVR_Actions.default_Haptic[SteamVR_Input_Sources.RightHand].Execute(0, 1, 50, 1);
+            ScoreHandler.Instance.UpdateScore(totalScore);
         }
         else
         {
@@ -93,6 +103,8 @@ public class BowlingManager : MonoBehaviour
             firstThrow = !firstThrow;
             currentFrame++;
             Debug.Log("Downed: " + downedPins.Count);
+            ScoreHandler.Instance.UpdateScore(totalScore);
+
         }
 
         if (currentFrame > 2 * totalRounds)
@@ -104,6 +116,8 @@ public class BowlingManager : MonoBehaviour
             totalScore = 0;
             currentFrame = 1;
             currentRound++;
+            ScoreHandler.Instance.UpdateRound(currentRound);
+            ScoreHandler.Instance.UpdateScore(totalScore);
         }
 
     }
